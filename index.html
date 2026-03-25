@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LightBox – Accueil</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="particles" id="particles"></div>
+    <header>
+      <aside class="team-box">
+        <div class="member">
+          <img src="nour.jpg" alt="Nour" />
+          <p>Nour El Houda Zahrouni</p>
+        </div>
+        <div class="member">
+          <img src="images/friend.jpg" alt="Akrem" />
+          <p>Akrem Ben Mansour</p>
+        </div>
+      </aside>
+      <div class="logo">
+        <svg
+          class="logo-img"
+          viewbox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            fill="none"
+            stroke="#ff00ff"
+            stroke-width="3"
+          />
+          <path
+            d="M50 20 L50 80 M30 50 L70 50"
+            stroke="#00eaff"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <circle cx="50" cy="50" r="10" fill="#ff00ff" />
+        </svg>
+        <div class="logo-text">LightBox</div>
+      </div>
+      <nav>
+        <a onclick="showPage('accueil')" class="active">Accueil</a>
+        <a onclick="showPage('inscription')">Inscription</a>
+        <a onclick="showPage('produits')">Produits</a>
+        <a onclick="showPage('panier')">Panier</a>
+      </nav>
+    </header>
+
+    <main id="page-accueil" class="page active">
+      <section class="hero">
+        <h1 id="hero-title">Illuminez Votre Monde</h1>
+        <p id="hero-subtitle">
+          Découvrez nos lampes LED modernes pour transformer votre espace.
+        </p>
+        <a onclick="showPage('produits')" class="pro">Découvrir</a>
+      </section>
+      <section class="presentation">
+        <h2 id="about-title">À propos de LightBox</h2>
+        <p id="about-text">
+          LightBox vous propose une sélection de lampes LED colorées, modernes
+          et décoratives pour ajouter de la magie à votre chambre, salon ou
+          bureau.
+        </p>
+      </section>
+      <section class="galerie">
+        <h2>Nos lampes populaires</h2>
+        <div class="images">
+          <img
+            src="LED1.jpg"
+            alt="Lampe LED 1"
+            onerror="this.src=''; this.alt='Image non disponible'; this.style.display='none';"
+          />
+          <img
+            src="LED2.jpg"
+            alt="Lampe LED 2"
+            onerror="this.src=''; this.alt='Image non disponible'; this.style.display='none';"
+          />
+          <img
+            src="LED3.jpg"
+            alt="Lampe LED 3"
+            onerror="this.src=''; this.alt='Image non disponible'; this.style.display='none';"
+          />
+          <img
+            src="LED 5.webp"
+            alt="Lampe LED 4"
+            onerror="this.src=''; this.alt='Image non disponible'; this.style.display='none';"
+          />
+        </div>
+      </section>
+    </main>
+    <main id="page-inscription" class="page">
+      <div class="inscription-container">
+        <h1>Inscription</h1>
+        <div id="success-message" class="success-message">
+          ✓ Inscription réussie ! Nous vous contacterons bientôt.
+        </div>
+        <form id="inscription-form">
+          <h3>Informations personnelles</h3>
+
+          <div class="form-group">
+            <label>Nom *</label>
+            <input type="text" id="nom" required />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Prénom *</label>
+            <input type="text" id="prenom" required />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="email" required />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Téléphone</label>
+            <input type="tel" id="telephone" />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Date de naissance</label>
+            <input type="date" id="naissance" />
+          </div>
+          <h3>Informations de compte</h3>
+
+          <div class="form-group">
+            <label>Nom d'utilisateur *</label>
+            <input type="text" id="username" required />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Mot de passe *</label>
+            <input type="password" id="password" required />
+            <div class="password-bar">
+              <div id="password-strength"></div>
+            </div>
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Confirmation mot de passe *</label>
+            <input type="password" id="confirm-password" required />
+            <small class="error"></small>
+          </div>
+
+          <h3>Préférences</h3>
+
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="newsletter" /> Newsletter</label>
+            <label
+              ><input type="checkbox" id="promo" /> Offres
+              promotionnelles</label
+            >
+          </div>
+
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="genre" value="Homme" /> Homme</label
+            >
+            <label
+              ><input type="radio" name="genre" value="Femme" /> Femme</label
+            >
+          </div>
+
+          <div class="form-group">
+            <label>Pays</label>
+            <select id="pays">
+              <option value="">Choisir</option>
+              <option>Tunisie</option>
+              <option>France</option>
+              <option>Canada</option>
+              <option>Allemagne</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="conditions" /> J'accepte les conditions
+              *
+            </label>
+            <small class="error"></small>
+          </div>
+
+          <button type="submit" class="submit-btn">Soumettre</button>
+          <button type="reset" class="submit-btn">Réinitialiser</button>
+        </form>
+      </div>
+    </main>
+
+    <main id="page-produits" class="page">
+      <div class="produits-container">
+        <h1>Nos Produits</h1>
+        <div class="produits-grid">
+          <div class="produit-card">
+            <img
+              class="produit-image"
+              src="LED 6.webp"
+              alt="Lampe LED Moderne"
+              onerror="this.src=''; this.alt='Image non disponible';"
+            />
+            <div class="produit-info">
+              <div class="produit-name">Lampe LED Moderne</div>
+              <div class="produit-description">
+                Lampe LED multicolore avec contrôle RGB, parfaite pour créer une
+                ambiance unique dans votre espace.
+              </div>
+              <div class="produit-price">89 DT</div>
+              <div class="produit-actions">
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="qty"
+                  data-name="Lampe LED Moderne"
+                  data-price="89"
+                />
+                <button class="add-btn">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="produit-card">
+            <img
+              class="produit-image"
+              src="LED 8.webp"
+              alt="Lampe Ambiance"
+              onerror="this.src=''; this.alt='Image non disponible';"
+            />
+            <div class="produit-info">
+              <div class="produit-name">Lampe Ambiance</div>
+              <div class="produit-description">
+                Design élégant avec éclairage doux, idéale pour votre chambre ou
+                salon.
+              </div>
+              <div class="produit-price">75 DT</div>
+              <div class="produit-actions">
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="qty"
+                  data-name="Lampe Ambiance"
+                  data-price="75"
+                />
+                <button class="add-btn">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="produit-card">
+            <img
+              class="produit-image"
+              src="LED4.png"
+              alt="Lampe Design"
+              onerror="this.src=''; this.alt='Image non disponible';"
+            />
+            <div class="produit-info">
+              <div class="produit-name">Lampe Design</div>
+              <div class="produit-description">
+                Lampe au design contemporain avec plusieurs modes d'éclairage
+                pour tous vos besoins.
+              </div>
+              <div class="produit-price">95 DT</div>
+              <div class="produit-actions">
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="qty"
+                  data-name="Lampe Design"
+                  data-price="95"
+                />
+                <button class="add-btn">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="produit-card">
+            <img
+              class="produit-image"
+              src="bureau lampe.jpg"
+              alt="Lampe Bureau"
+              onerror="this.src=''; this.alt='Image non disponible';"
+            />
+            <div class="produit-info">
+              <div class="produit-name">Lampe Bureau LED</div>
+              <div class="produit-description">
+                Parfaite pour le travail et les études avec lumière blanche
+                réglable.
+              </div>
+              <div class="produit-price">65 DT</div>
+              <div class="produit-actions">
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="qty"
+                  data-name="Lampe Bureau LED"
+                  data-price="65"
+                />
+                <button class="add-btn">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="produit-card">
+            <img
+              class="produit-image"
+              src="LED 9.webp"
+              alt="Lampe Décorative"
+              onerror="this.src=''; this.alt='Image non disponible';"
+            />
+            <div class="produit-info">
+              <div class="produit-name">Lampe Décorative</div>
+              <div class="produit-description">
+                Lampe LED décorative avec effets lumineux pour une atmosphère
+                magique.
+              </div>
+              <div class="produit-price">110 DT</div>
+              <div class="produit-actions">
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="qty"
+                  data-name="Lampe Décorative"
+                  data-price="110"
+                />
+                <button class="add-btn">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="produit-card">
+            <img
+              class="produit-image"
+              src="LED 10.webp"
+              alt="Lampe Connectée"
+              onerror="this.src=''; this.alt='Image non disponible';"
+            />
+            <div class="produit-info">
+              <div class="produit-name">Lampe Connectée</div>
+              <div class="produit-description">
+                Contrôlez votre lampe via application mobile avec des millions
+                de couleurs.
+              </div>
+              <div class="produit-price">125 DT</div>
+              <div class="produit-actions">
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="qty"
+                  data-name="Lampe Connectée"
+                  data-price="125"
+                />
+                <button class="add-btn">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="socials">
+        <h2>Suivez-nous</h2>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> •
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </section>
+    </main>
+
+    <main id="page-panier" class="page">
+      <div class="panier-container">
+        <h1>Récapitulatif de commande</h1>
+
+        <div id="panier-items"></div>
+
+        <h3>Total : <span id="panier-total">0</span> DT</h3>
+
+        <div class="panier-actions">
+          <button id="valider">Valider la commande</button>
+          <button id="reset-panier">Réinitialiser</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Email : <span id="footer-email">contact@lightbox.tn</span></p>
+      <p>WhatsApp : <span id="footer-whatsapp">+216 71 000 000</span></p>
+      <p>© 2025 LightBox – Tous droits réservés</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
