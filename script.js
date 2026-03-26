@@ -28,7 +28,7 @@ document
 
     let valid = true;
 
-    var email = document.getElementById("email");
+    
     var email = document.getElementById("email");
     var tel = document.getElementById("telephone");
     var password = document.getElementById("password");
