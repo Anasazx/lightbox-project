@@ -837,3 +837,6 @@ input:focus, select:focus {
 body {
     background: linear-gradient(to right, #1e3c72, #2a5298);
 }
+img {
+    border-radius: 10px;
+}
