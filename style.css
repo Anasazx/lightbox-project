@@ -17,6 +17,9 @@ body {
   background-color: #0d0d0d;
   color: white;
   overflow-x: hidden;
+  overflow-x: hidden;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
 }
 
 /* Particules de fond animÃ©es */
