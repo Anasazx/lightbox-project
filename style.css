@@ -843,3 +843,6 @@ img {
 img:hover {
     transform: scale(1.1);
 }
+nav {
+    background-color: black;
+}
