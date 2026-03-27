@@ -50,3 +50,13 @@ git pull origin main
 
 # Fusionner une branche
 git merge develop
+
+## Stratégie des branches
+- `main` → version stable du projet
+- `develop` → branche d'intégration
+- `feature-navbar` → barre de navigation
+- `feature-homepage` → page d'accueil
+- `feature-gallery` → galerie d'images
+- `feature-contact` → page de contact
+- `feature-footer` → pied de page
+- `feature-design` → design général
