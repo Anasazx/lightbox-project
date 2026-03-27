@@ -24,3 +24,29 @@ de 4 étudiants dans le cadre d'un projet Git/GitHub collaboratif.
    code lightbox-project
 ```
 6. Ouvrir `index.html` dans votre navigateur pour voir le site.
+
+## Commandes Git utilisées
+```bash
+# Cloner le dépôt
+git clone <url>
+
+# Créer et basculer sur une branche
+git checkout -b feature-nom
+
+# Vérifier la branche actuelle
+git branch
+
+# Ajouter les modifications
+git add .
+
+# Committer les modifications
+git commit -m "type: description"
+
+# Pousser la branche sur GitHub
+git push origin feature-nom
+
+# Récupérer les dernières modifications
+git pull origin main
+
+# Fusionner une branche
+git merge develop
