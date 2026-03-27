@@ -840,3 +840,6 @@ body {
 img {
     border-radius: 10px;
 }
+img:hover {
+    transform: scale(1.1);
+}
