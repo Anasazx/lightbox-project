@@ -846,3 +846,6 @@ img:hover {
 nav {
     background-color: black;
 }
+button {
+    background: #00ffcc;
+}
